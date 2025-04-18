@@ -1,0 +1,102 @@
+/* Correction de l'alignement global */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  overflow-x: hidden;
+  align-items: center; /* Centrer horizontalement */
+  justify-content: flex-start; /* Aligner en haut */
+  gap: var(--gap-mini);
+  text-align: left; /* Alignement du texte à gauche */
+  font-size: var(--font-size-3xl);
+  color: var(--color-black);
+  font-family: var(--font-manrope);
+}
+
+/* Correction des titres */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  text-align: left; /* Centrer les titres */
+  color: var(--color-titles);
+}
+
+/* Correction des liens dans le menu */
+div.menu a {
+  position: relative;
+  line-height: 44px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-slategray-100);
+  text-align: right; /* Centrer les liens */
+}
+
+div.menu a:hover {
+  color: var(--color-mediumslateblue); /* Couleur d'accentuation */
+}
+
+/* Correction du conteneur menu */
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Centrer le menu */
+  padding: 0 var(--padding-21xl);
+  gap: var(--gap-16xl);
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-slategray-100);
+}
+
+/* Correction du footer */
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  background-color: var(--color-black);
+  padding: var(--padding-lg) var(--padding-21xl);
+  align-items: right; /* Centrer le contenu du footer */
+  justify-content: right;
+  gap: var(--gap-3xs);
+  color: var(--color-black); /* Texte blanc */
+}
+
+/* Correction des conteneurs flex */
+.footercontent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column; /* Empiler les éléments verticalement */
+  align-items: center; /* Centrer horizontalement */
+  justify-content: center;
+  gap: var(--gap-sm);
+}
+
+/* Correction pour les petits écrans */
+@media screen and (max-width: 580px) {
+  .footercontent,
+  .logo2 {
+    align-items: right;
+    justify-content: right; /* Centrer sur petits écrans */
+  }
+  .footercontent {
+    flex-direction: column;
+    gap: var(--gap-21xl);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .menu {
+    display: none; /* Masquer le menu sur petits écrans */
+  }
+  
+  #header {
+    flex-direction: column;
+    gap: var(--gap-0);
+    align-items: center;
+    justify-content: center;
+  }
+}
